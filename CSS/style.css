@@ -36,10 +36,71 @@ ul {
     margin-top: 100px;
 }
 
-.bottomNav ul{
+.bottomNav ul {
     display: flex;
     justify-content: space-around;
     color: white;
     font-weight: bold;
     font-family: sans-serif;
+}
+
+#mySkillsTitle {
+    margin: 100px;
+}
+
+/*My UX Skills section coded using CSS flex*/
+
+.flexContainer {
+    display: flex;
+    margin-top: 50px;
+}
+
+.flexChild {
+    width: 33%;
+    margin: 24px;
+    padding: 24px;
+}
+
+#compass {
+    height: 100px;
+    width: auto;
+}
+
+#sign {
+    height: 100px;
+    width: auto;
+}
+
+#feather {
+    height: 100px;
+    width: auto;
+}
+
+/*My Work Section Constructed using CSS Grid*/
+
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "nonprofitImage doiImage"
+        "nonprofitContent doiContent";
+}
+
+@media only screen and (max-width: 600px){
+    .flexContainer{
+        display: column;
+    }
+    .flexChild{
+        width: 100%;
+    }
+    .workGrid{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nonprofitImage"
+            "nonprofitContent"
+            "doiImage"
+            "doiContent";
+    }
 }
